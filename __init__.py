@@ -39,7 +39,7 @@ if module == "Download":
 
     #local_filename = url.split('/')[-1]
     # NOTE the stream=True parameter below
-    with requests.get(url, stream=True) as r:
+    with requests.get(url, stream=True,verify=False) as r:
 
         r.raise_for_status()
         if not local_filename:
